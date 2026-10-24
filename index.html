@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intelligent Multi-Agent Mobile Manipulation · ICRA 2027 Workshop</title>
+  <meta name="description" content="A full-day ICRA 2027 workshop on teams of mobile robots that jointly manipulate shared objects through contact, force exchange and coupled dynamics, across ground, aerial, underwater, space and modular platforms.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Intelligent Multi-Agent Mobile Manipulation · ICRA 2027 Workshop">
+  <meta property="og:description" content="Teams of mobile robots that jointly manipulate shared objects through contact, forces and coupled dynamics. Invited talks, posters, a panel and a community research roadmap.">
+  <!-- og:url / og:image are absolute GitHub Pages URLs; update both if the site moves to a custom domain -->
+  <meta property="og:url" content="https://lguanrui.github.io/ICRA-2027-multi-robot-mobile-manipulation-workshop/">
+  <meta property="og:image" content="https://lguanrui.github.io/ICRA-2027-multi-robot-mobile-manipulation-workshop/assets/img/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b1626">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Apply a saved theme before first paint so the page does not flash.
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a class="wordmark" href="#top" aria-label="Intelligent Multi-Agent Mobile Manipulation, back to top">
+        <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+        <span class="wordmark-text">Multi-Agent Mobile Manipulation</span>
+        <span class="wordmark-short">ICRA 2027 Workshop</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#call">Call</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#organizers">Organizers</a></li>
+        </ul>
+      </nav>
+      <div class="nav-tools">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch color theme">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <!-- Proposal-stage marker: delete the <span class="pill"> once ICRA accepts the workshop. -->
+          <p class="kicker">ICRA 2027 · Full-day workshop <span class="pill">Proposal stage</span></p>
+          <h1><span class="h1-line">Intelligent</span> <span class="h1-line">Multi&#8209;Agent Mobile</span> <span class="h1-line">Manipulation</span></h1>
+          <p class="lede">Teams of mobile robots that jointly manipulate shared objects through contact, force exchange and coupled dynamics, on the ground, in the air, underwater and in space.</p>
+          <ul class="hero-meta" aria-label="Workshop facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg><span data-fill="workshopDate"></span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg><span data-fill="venue"></span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Full day, 09:00–17:40</span></li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#call">Call for contributions</a>
+            <a class="btn btn-ghost" href="#program">See the program</a>
+          </div>
+        </div>
+
+        <figure class="hero-figure">
+          <!-- Schematic, not a photo: four heterogeneous robots holding one object. Arrows are contact forces;
+               dashed links are the communication graph. Swap for real team footage if the organizers share some. -->
+          <svg class="schematic" viewBox="0 0 640 470" role="img" aria-labelledby="schem-title schem-desc">
+            <title id="schem-title">Schematic of a heterogeneous robot team manipulating one object</title>
+            <desc id="schem-desc">Two quadrotors lift a shared beam on cables while two wheeled mobile manipulators grip its ends; arrows mark the contact forces each robot applies, and dashed lines show the communication links between robots.</desc>
+            <defs>
+              <marker id="arrowhead" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" class="force-head"/>
+              </marker>
+            </defs>
+
+            <!-- communication graph -->
+            <g class="comm">
+              <line x1="180" y1="92" x2="470" y2="72"/>
+              <line x1="180" y1="92" x2="112" y2="356"/>
+              <line x1="470" y1="72" x2="540" y2="356"/>
+              <line x1="182" y1="380" x2="468" y2="380"/>
+            </g>
+
+            <!-- ground -->
+            <line class="ground" x1="24" y1="414" x2="616" y2="414"/>
+
+            <!-- cables -->
+            <g class="cable">
+              <line x1="180" y1="98" x2="252" y2="240"/>
+              <line x1="470" y1="78" x2="388" y2="240"/>
+            </g>
+
+            <!-- shared object + centre of mass -->
+            <rect class="object" x="200" y="240" width="240" height="60" rx="8"/>
+            <g class="com" transform="translate(320 270)">
+              <circle r="9"/>
+              <path d="M0 0 V-9 A9 9 0 0 1 9 0 Z"/>
+              <path d="M0 0 V9 A9 9 0 0 1 -9 0 Z"/>
+            </g>
+            <circle class="attach" cx="252" cy="240" r="4"/>
+            <circle class="attach" cx="388" cy="240" r="4"/>
+
+            <!-- quadrotor A -->
+            <g class="robot drone drone-a">
+              <line x1="138" y1="92" x2="222" y2="92"/>
+              <line x1="138" y1="92" x2="138" y2="84"/><line x1="222" y1="92" x2="222" y2="84"/>
+              <ellipse class="rotor" cx="138" cy="82" rx="25" ry="4"/>
+              <ellipse class="rotor" cx="222" cy="82" rx="25" ry="4"/>
+              <rect x="166" y="85" width="28" height="13" rx="4"/>
+            </g>
+            <!-- quadrotor B -->
+            <g class="robot drone drone-b">
+              <line x1="428" y1="72" x2="512" y2="72"/>
+              <line x1="428" y1="72" x2="428" y2="64"/><line x1="512" y1="72" x2="512" y2="64"/>
+              <ellipse class="rotor" cx="428" cy="62" rx="25" ry="4"/>
+              <ellipse class="rotor" cx="512" cy="62" rx="25" ry="4"/>
+              <rect x="456" y="65" width="28" height="13" rx="4"/>
+            </g>
+
+            <!-- mobile manipulator, left -->
+            <g class="robot">
+              <rect x="56" y="356" width="126" height="38" rx="7"/>
+              <circle cx="84" cy="402" r="11"/><circle cx="154" cy="402" r="11"/>
+              <polyline class="arm" points="146,356 158,300 192,272"/>
+              <circle class="joint" cx="146" cy="356" r="5"/><circle class="joint" cx="158" cy="300" r="5"/>
+              <path class="gripper" d="M190 262 H200 M190 282 H200 M190 262 V282"/>
+            </g>
+            <!-- mobile manipulator, right -->
+            <g class="robot">
+              <rect x="458" y="356" width="126" height="38" rx="7"/>
+              <circle cx="486" cy="402" r="11"/><circle cx="556" cy="402" r="11"/>
+              <polyline class="arm" points="494,356 482,300 448,272"/>
+              <circle class="joint" cx="494" cy="356" r="5"/><circle class="joint" cx="482" cy="300" r="5"/>
+              <path class="gripper" d="M450 262 H440 M450 282 H440 M450 262 V282"/>
+            </g>
+
+            <!-- contact forces -->
+            <g class="force">
+              <line x1="262" y1="236" x2="242" y2="194" marker-end="url(#arrowhead)"/>
+              <line x1="378" y1="236" x2="398" y2="194" marker-end="url(#arrowhead)"/>
+              <line x1="206" y1="256" x2="252" y2="256" marker-end="url(#arrowhead)"/>
+              <line x1="434" y1="256" x2="388" y2="256" marker-end="url(#arrowhead)"/>
+            </g>
+            <g class="label">
+              <text x="216" y="190">f<tspan dy="4" font-size="12">1</tspan></text>
+              <text x="406" y="190">f<tspan dy="4" font-size="12">2</tspan></text>
+              <text x="214" y="290">f<tspan dy="4" font-size="12">3</tspan></text>
+              <text x="410" y="290">f<tspan dy="4" font-size="12">4</tspan></text>
+            </g>
+            <text class="eq" x="320" y="448" text-anchor="middle">Σ G<tspan dy="4" font-size="11">i</tspan><tspan dy="-4"> w</tspan><tspan dy="4" font-size="11">i</tspan><tspan dy="-4"> = M v̇ + h(q, v)</tspan></text>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SCOPE ============ -->
+    <section class="section" id="scope">
+      <div class="container">
+        <p class="eyebrow">Scope</p>
+        <h2 class="reveal">When robots share an object, their dynamics stop being separate.</h2>
+        <div class="scope-grid">
+          <div class="prose reveal">
+            <p>Multi-agent mobile manipulation is about teams of mobile robots that <strong>jointly manipulate shared objects</strong> or interact physically with their surroundings, through contact, forces and coupled dynamics. The same central problem appears whether the team flies, drives, swims, floats in orbit or reassembles itself.</p>
+            <p>Recent advances in distributed autonomy, perception and robot learning make more capable collective action possible, yet coordination under physical coupling remains a fundamental barrier. We bring ground, aerial, underwater, space and modular robotics together on purpose: comparing embodiments is how we separate domain-specific limitations from fundamental, transferable problems.</p>
+          </div>
+          <div class="scope-box reveal">
+            <h3>In scope</h3>
+            <ul class="check-list">
+              <li>Several mobile robots cooperating on one object or one physical interaction</li>
+              <li>Contact, force exchange and coupled dynamics between robots, object and environment</li>
+              <li>Ground, aerial, underwater, space, modular and heterogeneous teams</li>
+            </ul>
+            <h3>Out of scope</h3>
+            <ul class="cross-list">
+              <li>Purely navigational coordination</li>
+              <li>Task allocation without joint physical interaction</li>
+              <li>Standalone, single-robot manipulation</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="chips reveal" aria-label="Embodiments represented">
+          <li>Ground</li><li>Aerial</li><li>Underwater</li><li>Space</li><li>Modular</li><li>Heterogeneous teams</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ QUESTIONS ============ -->
+    <section class="section alt" id="questions">
+      <div class="container">
+        <p class="eyebrow">Three questions</p>
+        <h2 class="reveal">The whole day is organized around three open questions.</h2>
+        <p class="section-lede reveal">Every talk, poster and discussion slot feeds one of them, and they are the backbone of the roadmap we will write with participants.</p>
+        <div class="q-grid">
+          <article class="q-card reveal">
+            <span class="q-num">01</span>
+            <svg class="q-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="20" width="20" height="10" rx="2"/><path d="M6 25h7M42 25h-7M24 6v13"/><path d="M10 22l3 3-3 3M38 22l-3 3 3 3M21 16l3 3 3-3"/></svg>
+            <h3>Physical coordination</h3>
+            <p>How can teams plan and regulate shared contacts, wrenches and motions under coupled dynamics and actuation limits?</p>
+          </article>
+          <article class="q-card reveal">
+            <span class="q-num">02</span>
+            <svg class="q-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="10" cy="12" r="4"/><circle cx="38" cy="12" r="4"/><circle cx="24" cy="40" r="4"/><rect x="18" y="20" width="12" height="9" rx="2"/><path d="M13 15l6 5M35 15l-6 5M24 36v-7" stroke-dasharray="2 3"/></svg>
+            <h3>Distributed interaction perception</h3>
+            <p>How can robots jointly infer object state, contact and forces under uncertainty and partial observations?</p>
+          </article>
+          <article class="q-card reveal">
+            <span class="q-num">03</span>
+            <svg class="q-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8M8 40h32"/><rect x="13" y="28" width="6" height="12"/><rect x="23" y="20" width="6" height="20"/><rect x="33" y="12" width="6" height="28"/></svg>
+            <h3>Scalability and validation</h3>
+            <p>Which safety, recovery and performance principles transfer across embodiments, and how should they be benchmarked?</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPEAKERS ============ -->
+    <section class="section" id="speakers">
+      <div class="container">
+        <p class="eyebrow">Invited speakers</p>
+        <h2 class="reveal">Speakers from aerial, underwater, modular and field robotics.</h2>
+        <p class="section-lede reveal">Alongside robot learning and multi-robot decision making, so that no single platform sets the agenda. Talk titles will be posted here.</p>
+        <div class="people-grid speaker-grid" id="speaker-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAM ============ -->
+    <section class="section alt" id="program">
+      <div class="container">
+        <p class="eyebrow">Program</p>
+        <h2 class="reveal">Built for discussion, not a talk marathon.</h2>
+        <p class="section-lede reveal" id="program-lede">Tentative schedule, local time.</p>
+
+        <figure class="daystrip reveal" aria-labelledby="daystrip-cap">
+          <figcaption id="daystrip-cap" class="daystrip-cap">The day at a glance, 09:00–17:40</figcaption>
+          <ul class="legend" id="daystrip-legend"></ul>
+          <div class="strip" id="daystrip" role="list"></div>
+          <div class="strip-axis" aria-hidden="true"><span>09:00</span><span>12:00</span><span>15:00</span><span>17:40</span></div>
+        </figure>
+
+        <div class="schedule" id="schedule"></div>
+      </div>
+    </section>
+
+    <!-- ============ CALL ============ -->
+    <section class="section" id="call">
+      <div class="container">
+        <p class="eyebrow">Call for contributions</p>
+        <h2 class="reveal">Bring your work to the poster sessions.</h2>
+        <div class="call-grid">
+          <div class="prose reveal">
+            <p>We will accept up to <strong>20 contributions</strong>. Each one gets a short spotlight in the lightning-talk session and a poster in one of the two one-hour poster sessions, where invited speakers are encouraged to join the discussion.</p>
+            <h3>Topics</h3>
+            <ul class="topic-list">
+              <li>Cooperative manipulation and transport with contact and force exchange</li>
+              <li>Planning and control of shared contacts, wrenches and motions under coupled dynamics and actuation limits</li>
+              <li>Joint estimation of object state, contact and forces from partial, distributed observations</li>
+              <li>Learning for collective physical interaction</li>
+              <li>Safety, recovery and failure handling in physically coupled teams</li>
+              <li>Benchmarks, challenge tasks and validation across ground, aerial, underwater, space and modular robots</li>
+            </ul>
+            <p><strong>Early-stage work, negative results and position papers are welcome.</strong> Contributions are selected for relevance to joint physical manipulation and for their potential to start a discussion. Contributions are non-archival.</p>
+            <p class="placeholder-note">Format, page limit and submission portal will be announced with the call.</p>
+          </div>
+          <aside class="dates-card reveal" aria-labelledby="dates-title">
+            <h3 id="dates-title">Important dates</h3>
+            <dl class="dates" id="dates"></dl>
+            <p class="dates-foot">Deadlines are 23:59 Anywhere on Earth.</p>
+            <a class="btn btn-primary btn-block is-disabled" id="submit-btn" aria-disabled="true">Submission opens soon</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP ============ -->
+    <section class="section alt" id="roadmap">
+      <div class="container">
+        <p class="eyebrow">Community roadmap</p>
+        <h2 class="reveal">The outcome is a shared research roadmap.</h2>
+        <p class="section-lede reveal">The workshop does not end at 17:40. Participants help write a public roadmap of common bottlenecks, transferable principles, challenge tasks and benchmarks, and the final version will live on this page.</p>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-tag">Before</span>
+            <h3>Questions out, prompts in</h3>
+            <p>We circulate the three guiding questions and collect discussion prompts from participants.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-tag">During</span>
+            <h3>Panel, breakouts, synthesis</h3>
+            <p>The panel compares cross-domain bottlenecks. Breakout groups record shared bottlenecks, embodiment-specific constraints and benchmarkable challenge tasks in a common template; rapporteurs summarize them for the whole room.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-tag">After</span>
+            <h3>Draft, comment, publish</h3>
+            <p>We draft the roadmap, invite participants to comment, and post the revised version here, together with slides, recordings and posters where speakers allow.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ORGANIZERS ============ -->
+    <section class="section" id="organizers">
+      <div class="container">
+        <p class="eyebrow">Organizers</p>
+        <h2 class="reveal">Four organizers, three continents.</h2>
+        <div class="people-grid org-grid" id="organizer-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PARTICIPATE ============ -->
+    <section class="section alt" id="participate">
+      <div class="container">
+        <p class="eyebrow">Participation</p>
+        <h2 class="reveal">Everyone at the table.</h2>
+        <div class="info-grid">
+          <div class="info reveal">
+            <h3>Inclusive by design</h3>
+            <p>We aim for a room that is diverse in platform, method, region, gender, career stage, and academic or industry background. Facilitators will invite input from students and from anyone who has not spoken yet, and both spoken and written contributions count.</p>
+          </div>
+          <div class="info reveal">
+            <h3>Code of conduct</h3>
+            <p>All participants follow the <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/about/ieee_code_of_conduct.pdf">IEEE Code of Conduct</a> and the ICRA 2027 conference policies. Please contact the organizers about any concern.</p>
+          </div>
+          <div class="info reveal">
+            <h3>Accessibility and remote access</h3>
+            <p>Venue accessibility details will be posted here with the ICRA 2027 venue information. We plan to offer remote participation if it is technically feasible and permitted by the conference.</p>
+          </div>
+          <div class="info reveal">
+            <h3>IEEE RAS technical committees</h3>
+            <p>The workshop is aligned with the <a href="https://www.ieee-ras.org/multi-robot-systems">Multi-Robot Systems</a> TC (primary) and the <a href="https://www.ieee-ras.org/mobile-manipulation">Mobile Manipulation</a> TC (secondary), and reaches out to the aerial and marine robotics communities.</p>
+          </div>
+        </div>
+        <div class="contact reveal">
+          <div>
+            <h3>Questions?</h3>
+            <p>Write to the primary contact, <span data-fill="contactName"></span>.</p>
+          </div>
+          <a class="btn btn-primary" id="contact-btn" href="#participate">Email the organizers</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title">Intelligent Multi-Agent Mobile Manipulation</p>
+        <p>A full-day workshop at <a href="https://2027.ieee-icra.org">IEEE ICRA 2027</a>, <span data-fill="venue"></span>.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#call">Call for contributions</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="footer-base">
+        <p>© 2026 The workshop organizers</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <noscript><p class="noscript">Speakers, schedule and dates need JavaScript to display. The workshop details are in <code>assets/js/data.js</code>.</p></noscript>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
